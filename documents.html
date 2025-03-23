@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/documents.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="clients.html">
+                <i class="fas fa-users"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="tasks.html">
+                <i class="fas fa-tasks"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="calendar.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="documents.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="help.html">
+            <i class="fas fa-question-circle"></i>
+            <span>Help</span>
+          </a>
+          <a href="index.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="top-navbar">
+          <div class="page-title">
+            <h1>Documents</h1>
+            <nav class="breadcrumb">
+              <span>Home</span> /
+              <span>Documents</span>
+            </nav>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input type="text" placeholder="Search..." id="globalSearch" />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="notifications">
+              <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+              </button>
+              <div class="notification-dropdown">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                  <a href="#" id="markAllRead">Mark all as read</a>
+                </div>
+                <ul class="notification-list">
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        New client <strong>Stuttgart Plant</strong> has been
+                        added
+                      </p>
+                      <span class="notification-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Monthly report for <strong>Munich Plant</strong> is
+                        ready
+                      </p>
+                      <span class="notification-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        <strong>Berlin Plant</strong> contract is expiring in 7
+                        days
+                      </p>
+                      <span class="notification-time">Yesterday</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-icon">
+                      <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Task <strong>Update Client Information</strong> has been
+                        completed
+                      </p>
+                      <span class="notification-time">2 days ago</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="notification-footer">
+                  <a href="notifications.html">View all notifications</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-profile">
+              <button class="profile-btn">
+                <img src="assets/user-avatar.jpg" alt="User Avatar" />
+                <span>Thomas Weber</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="profile-dropdown">
+                <ul>
+                  <li>
+                    <a href="profile.html">
+                      <i class="fas fa-user"></i>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="help.html">
+                      <i class="fas fa-question-circle"></i>
+                      Help Center
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="index.html" id="logoutBtnMenu">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Documents Content -->
+        <div class="content-wrapper">
+          <!-- Action Bar -->
+          <div class="action-bar">
+            <div class="action-left">
+              <button class="btn btn-primary" id="uploadDocBtn">
+                <i class="fas fa-upload"></i> Upload Document
+              </button>
+              <button class="btn btn-outline" id="newFolderBtn">
+                <i class="fas fa-folder-plus"></i> New Folder
+              </button>
+            </div>
+            <div class="action-right">
+              <div class="search-documents">
+                <input type="text" placeholder="Search documents..." />
+                <button class="search-btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                  <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" data-view="list">
+                  <i class="fas fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder Path -->
+          <div class="folder-path">
+            <i class="fas fa-home"></i>
+            <a href="#">Home</a> / <a href="#">Client Documents</a> /
+            <span>Stuttgart Plant</span>
+          </div>
+
+          <!-- Documents Grid View -->
+          <div class="documents-container grid-view">
+            <div class="document-item folder">
+              <div class="document-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="document-info">
+                <h3>Contracts</h3>
+                <p>Last modified: Mar 15, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="document-item folder">
+              <div class="document-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="document-info">
+                <h3>Meeting Notes</h3>
+                <p>Last modified: Mar 10, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="document-item file pdf">
+              <div class="document-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="document-info">
+                <h3>Q1 Plant Report.pdf</h3>
+                <p>2.4 MB • Added Mar 20, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="document-item file doc">
+              <div class="document-icon">
+                <i class="fas fa-file-word"></i>
+              </div>
+              <div class="document-info">
+                <h3>Service Agreement.docx</h3>
+                <p>1.8 MB • Added Mar 12, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="document-item file excel">
+              <div class="document-icon">
+                <i class="fas fa-file-excel"></i>
+              </div>
+              <div class="document-info">
+                <h3>Production Data.xlsx</h3>
+                <p>3.2 MB • Added Mar 5, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="document-item file pdf">
+              <div class="document-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="document-info">
+                <h3>Technical Specifications.pdf</h3>
+                <p>4.5 MB • Added Feb 28, 2025</p>
+              </div>
+              <div class="document-actions">
+                <button class="btn-icon" title="More Actions">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Upload Document Modal -->
+    <div class="modal" id="uploadDocModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Upload Document</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="upload-zone" id="dropZone">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h3>Drag & Drop Files Here</h3>
+            <p>or</p>
+            <button class="btn btn-outline">Browse Files</button>
+            <input type="file" id="fileInput" style="display: none" multiple />
+          </div>
+          <div class="form-group">
+            <label for="uploadFolder">Upload to Folder</label>
+            <select id="uploadFolder">
+              <option value="current">Current Folder: Stuttgart Plant</option>
+              <option value="contracts">Stuttgart Plant / Contracts</option>
+              <option value="meetings">Stuttgart Plant / Meeting Notes</option>
+              <option value="root">Home</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelUploadBtn">Cancel</button>
+          <button class="btn btn-primary" id="confirmUploadBtn">Upload</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Folder Modal -->
+    <div class="modal" id="newFolderModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create New Folder</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="folderName">Folder Name</label>
+            <input type="text" id="folderName" required />
+          </div>
+          <div class="form-group">
+            <label for="parentFolder">Parent Folder</label>
+            <select id="parentFolder">
+              <option value="current">Current Folder: Stuttgart Plant</option>
+              <option value="contracts">Stuttgart Plant / Contracts</option>
+              <option value="meetings">Stuttgart Plant / Meeting Notes</option>
+              <option value="root">Home</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelFolderBtn">Cancel</button>
+          <button class="btn btn-primary" id="saveFolderBtn">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/documents.js"></script>
+  </body>
+</html>

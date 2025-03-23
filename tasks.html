@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/tasks.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="clients.html">
+                <i class="fas fa-users"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="tasks.html">
+                <i class="fas fa-tasks"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="calendar.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="help.html">
+            <i class="fas fa-question-circle"></i>
+            <span>Help</span>
+          </a>
+          <a href="index.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="top-navbar">
+          <div class="page-title">
+            <h1>Tasks</h1>
+            <nav class="breadcrumb">
+              <span>Home</span> /
+              <span>Tasks</span>
+            </nav>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input type="text" placeholder="Search..." id="globalSearch" />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="notifications">
+              <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+              </button>
+              <div class="notification-dropdown">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                  <a href="#" id="markAllRead">Mark all as read</a>
+                </div>
+                <ul class="notification-list">
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        New client <strong>Stuttgart Plant</strong> has been
+                        added
+                      </p>
+                      <span class="notification-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Monthly report for <strong>Munich Plant</strong> is
+                        ready
+                      </p>
+                      <span class="notification-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        <strong>Berlin Plant</strong> contract is expiring in 7
+                        days
+                      </p>
+                      <span class="notification-time">Yesterday</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-icon">
+                      <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Task <strong>Update Client Information</strong> has been
+                        completed
+                      </p>
+                      <span class="notification-time">2 days ago</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="notification-footer">
+                  <a href="notifications.html">View all notifications</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-profile">
+              <button class="profile-btn">
+                <img src="assets/user-avatar.jpg" alt="User Avatar" />
+                <span>Thomas Weber</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="profile-dropdown">
+                <ul>
+                  <li>
+                    <a href="profile.html">
+                      <i class="fas fa-user"></i>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="help.html">
+                      <i class="fas fa-question-circle"></i>
+                      Help Center
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="index.html" id="logoutBtnMenu">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Tasks Content -->
+        <div class="content-wrapper">
+          <!-- Action Bar -->
+          <div class="action-bar">
+            <div class="action-left">
+              <button class="btn btn-primary" id="createTaskBtn">
+                <i class="fas fa-plus"></i> Create New Task
+              </button>
+            </div>
+            <div class="action-right">
+              <div class="filter-group">
+                <label for="taskStatusFilter">Status:</label>
+                <select id="taskStatusFilter">
+                  <option value="all">All</option>
+                  <option value="pending">Pending</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tasks List -->
+          <div class="tasks-container">
+            <div class="tasks-list">
+              <!-- Task Item -->
+              <div class="task-item">
+                <div class="task-status pending"></div>
+                <div class="task-content">
+                  <h3>Contact Munich Plant regarding contract renewal</h3>
+                  <p>
+                    Schedule a call with plant manager to discuss renewal terms
+                  </p>
+                  <div class="task-meta">
+                    <span class="task-due"
+                      ><i class="fas fa-calendar"></i> Due: Mar 28, 2025</span
+                    >
+                    <span class="task-priority high"
+                      ><i class="fas fa-flag"></i> High Priority</span
+                    >
+                    <span class="task-assignee"
+                      ><i class="fas fa-user"></i> Assigned to: Thomas
+                      Weber</span
+                    >
+                  </div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn-icon" title="Edit Task">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-icon" title="Complete Task">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  <button class="btn-icon" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="task-item">
+                <div class="task-status in-progress"></div>
+                <div class="task-content">
+                  <h3>Prepare quarterly report for Stuttgart Plant</h3>
+                  <p>Gather data and compile performance metrics for Q1 2025</p>
+                  <div class="task-meta">
+                    <span class="task-due"
+                      ><i class="fas fa-calendar"></i> Due: Apr 5, 2025</span
+                    >
+                    <span class="task-priority medium"
+                      ><i class="fas fa-flag"></i> Medium Priority</span
+                    >
+                    <span class="task-assignee"
+                      ><i class="fas fa-user"></i> Assigned to: Maria
+                      Schmidt</span
+                    >
+                  </div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn-icon" title="Edit Task">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-icon" title="Complete Task">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  <button class="btn-icon" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="task-item">
+                <div class="task-status completed"></div>
+                <div class="task-content">
+                  <h3>Onboard new client: Frankfurt Office</h3>
+                  <p>Complete initial documentation and system setup</p>
+                  <div class="task-meta">
+                    <span class="task-due"
+                      ><i class="fas fa-calendar"></i> Completed: Mar 15,
+                      2025</span
+                    >
+                    <span class="task-priority high"
+                      ><i class="fas fa-flag"></i> High Priority</span
+                    >
+                    <span class="task-assignee"
+                      ><i class="fas fa-user"></i> Assigned to: Andreas
+                      Müller</span
+                    >
+                  </div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn-icon" title="Edit Task">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-icon" title="Reopen Task">
+                    <i class="fas fa-redo"></i>
+                  </button>
+                  <button class="btn-icon" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Task Creation Modal -->
+    <div class="modal" id="createTaskModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create New Task</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="createTaskForm">
+            <div class="form-group">
+              <label for="taskTitle">Task Title</label>
+              <input type="text" id="taskTitle" required />
+            </div>
+            <div class="form-group">
+              <label for="taskDescription">Description</label>
+              <textarea id="taskDescription" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="taskDue">Due Date</label>
+                <input type="date" id="taskDue" required />
+              </div>
+              <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority">
+                  <option value="low">Low</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="taskAssignee">Assign To</label>
+              <select id="taskAssignee">
+                <option value="self">Myself</option>
+                <option value="thomas">Thomas Weber</option>
+                <option value="maria">Maria Schmidt</option>
+                <option value="andreas">Andreas Müller</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelTaskBtn">Cancel</button>
+          <button class="btn btn-primary" id="saveTaskBtn">Save Task</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/tasks.js"></script>
+  </body>
+</html>

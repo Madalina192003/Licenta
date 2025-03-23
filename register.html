@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-sidebar">
+        <div class="logo-container">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+        </div>
+        <div class="sidebar-content">
+          <h2>Join the BOSCH Customer Management System</h2>
+          <p>
+            Create your account to access comprehensive client management tools
+            and analytics.
+          </p>
+          <div class="features-list">
+            <div class="feature-item">
+              <i class="fas fa-user-shield"></i>
+              <p>Secure Access</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-chart-pie"></i>
+              <p>Real-time Analytics</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-database"></i>
+              <p>Centralized Data</p>
+            </div>
+          </div>
+        </div>
+        <div class="return-home">
+          <a href="index.html"
+            ><i class="fas fa-arrow-left"></i> Back to Homepage</a
+          >
+        </div>
+      </div>
+      <div class="register-form-container">
+        <div class="register-form-wrapper">
+          <h2>Create an Account</h2>
+          <p>Fill in your details to register for BOSCH CMS</p>
+
+          <form class="register-form">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-with-icon">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="your.email@bosch.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-with-icon">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Create a strong password"
+                  required
+                />
+                <button type="button" class="toggle-password">
+                  <i class="fas fa-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <div class="input-with-icon">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm your password"
+                  required
+                />
+                <button type="button" class="toggle-password">
+                  <i class="fas fa-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <div class="input-with-icon">
+                <i class="fas fa-building"></i>
+                <select id="department" required>
+                  <option value="" disabled selected>
+                    Select your department
+                  </option>
+                  <option value="sales">Sales</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="support">Customer Support</option>
+                  <option value="it">IT</option>
+                  <option value="finance">Finance</option>
+                  <option value="management">Management</option>
+                  <option value="hr">Human Resources</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="terms-container">
+              <input type="checkbox" id="terms" required />
+              <label for="terms"
+                >I agree to the <a href="#">Terms of Service</a> and
+                <a href="#">Privacy Policy</a></label
+              >
+            </div>
+
+            <button type="submit" class="create-account-btn">
+              Create Account
+            </button>
+          </form>
+
+          <div class="sign-in-prompt">
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+          </div>
+        </div>
+
+        <div class="register-footer">
+          <p>&copy; 2025 Robert Bosch GmbH. All rights reserved.</p>
+          <div class="language-selector">
+            <i class="fas fa-globe"></i>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>

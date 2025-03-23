@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="clients.html">
+                <i class="fas fa-users"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="tasks.html">
+                <i class="fas fa-tasks"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="calendar.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="help.html">
+            <i class="fas fa-question-circle"></i>
+            <span>Help</span>
+          </a>
+          <a href="index.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="top-navbar">
+          <div class="page-title">
+            <h1>Dashboard</h1>
+            <nav class="breadcrumb">
+              <span>Home</span> /
+              <span>Dashboard</span>
+            </nav>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input type="text" placeholder="Search..." id="globalSearch" />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="notifications">
+              <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+              </button>
+              <div class="notification-dropdown">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                  <a href="#" id="markAllRead">Mark all as read</a>
+                </div>
+                <ul class="notification-list">
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        New client <strong>Stuttgart Plant</strong> has been
+                        added
+                      </p>
+                      <span class="notification-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Monthly report for <strong>Munich Plant</strong> is
+                        ready
+                      </p>
+                      <span class="notification-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        <strong>Berlin Plant</strong> contract is expiring in 7
+                        days
+                      </p>
+                      <span class="notification-time">Yesterday</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-icon">
+                      <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Task <strong>Update Client Information</strong> has been
+                        completed
+                      </p>
+                      <span class="notification-time">2 days ago</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="notification-footer">
+                  <a href="notifications.html">View all notifications</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-profile">
+              <button class="profile-btn">
+                <img src="assets/user-avatar.jpg" alt="User Avatar" />
+                <span>Thomas Weber</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="profile-dropdown">
+                <ul>
+                  <li>
+                    <a href="profile.html">
+                      <i class="fas fa-user"></i>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="help.html">
+                      <i class="fas fa-question-circle"></i>
+                      Help Center
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="index.html" id="logoutBtnMenu">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-wrapper">
+          <!-- Welcome Message -->
+          <div class="welcome-banner">
+            <div class="welcome-content">
+              <h2>Welcome back, Thomas!</h2>
+              <p>Here's what's happening with your clients today.</p>
+            </div>
+            <div class="welcome-date">
+              <h3 id="currentDate">Sunday, March 23, 2025</h3>
+            </div>
+          </div>
+
+          <!-- KPI Stats Overview -->
+          <div class="stat-cards">
+            <div class="stat-card" id="totalClientsCard">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Total Clients</h3>
+                <h2>42</h2>
+                <p class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i> 8% from last month
+                </p>
+              </div>
+            </div>
+
+            <div class="stat-card" id="activePlantsCard">
+              <div class="stat-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Active Plants</h3>
+                <h2>38</h2>
+                <p class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i> 5% from last month
+                </p>
+              </div>
+            </div>
+
+            <div class="stat-card" id="totalRevenueCard">
+              <div class="stat-icon">
+                <i class="fas fa-euro-sign"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Total Revenue</h3>
+                <h2>€248.5M</h2>
+                <p class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i> 12% from last month
+                </p>
+              </div>
+            </div>
+
+            <div class="stat-card" id="pendingTasksCard">
+              <div class="stat-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <div class="stat-content">
+                <h3>Pending Tasks</h3>
+                <h2>12</h2>
+                <p class="stat-trend negative">
+                  <i class="fas fa-arrow-up"></i> 3% from last month
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts & Analytics Section -->
+          <div class="dashboard-grid">
+            <!-- Revenue Trend Chart -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Revenue Trend</h3>
+                <div class="card-dropdown">
+                  <button id="revenuePeriodBtn">
+                    Monthly <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="dropdown-menu" id="revenuePeriodMenu">
+                    <a href="#" data-period="daily">Daily</a>
+                    <a href="#" data-period="weekly">Weekly</a>
+                    <a href="#" data-period="monthly" class="active">Monthly</a>
+                    <a href="#" data-period="quarterly">Quarterly</a>
+                    <a href="#" data-period="yearly">Yearly</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="revenueChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Client Distribution Chart -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Client Distribution</h3>
+                <div class="card-dropdown">
+                  <button id="distributionTypeBtn">
+                    By Region <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="dropdown-menu" id="distributionTypeMenu">
+                    <a href="#" data-type="region" class="active">By Region</a>
+                    <a href="#" data-type="type">By Type</a>
+                    <a href="#" data-type="size">By Size</a>
+                    <a href="#" data-type="industry">By Industry</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="distributionChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Recent Activity</h3>
+                <a href="#" class="view-all">View All</a>
+              </div>
+              <div class="card-body">
+                <ul class="activity-list" id="activityList">
+                  <li class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="activity-content">
+                      <h4>New Client Added</h4>
+                      <p>Stuttgart Plant was added to your client list.</p>
+                      <span class="activity-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="activity-content">
+                      <h4>Report Generated</h4>
+                      <p>Monthly report for Munich Plant is ready.</p>
+                      <span class="activity-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="activity-content">
+                      <h4>Client Feedback</h4>
+                      <p>
+                        Berlin Plant has submitted feedback on the latest
+                        service.
+                      </p>
+                      <span class="activity-time">Yesterday</span>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <div class="activity-icon">
+                      <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="activity-content">
+                      <h4>Task Completed</h4>
+                      <p>
+                        Task "Update Client Information" has been completed.
+                      </p>
+                      <span class="activity-time">2 days ago</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Client Status -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Client Status</h3>
+                <a href="#" class="view-all">View All</a>
+              </div>
+              <div class="card-body">
+                <div class="status-chart">
+                  <canvas id="statusChart"></canvas>
+                </div>
+                <div class="status-legend">
+                  <div class="legend-item">
+                    <span
+                      class="legend-color"
+                      style="background-color: #28a745"
+                    ></span>
+                    <span class="legend-label">Active (38)</span>
+                  </div>
+                  <div class="legend-item">
+                    <span
+                      class="legend-color"
+                      style="background-color: #ffc107"
+                    ></span>
+                    <span class="legend-label">Pending (3)</span>
+                  </div>
+                  <div class="legend-item">
+                    <span
+                      class="legend-color"
+                      style="background-color: #dc3545"
+                    ></span>
+                    <span class="legend-label">Inactive (1)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Clients & Reminders -->
+          <div class="dashboard-grid-2col">
+            <!-- Recent Clients -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Recent Clients</h3>
+                <a href="clients.html" class="view-all">View All Clients</a>
+              </div>
+              <div class="card-body">
+                <div class="recent-clients-list" id="recentClientsList">
+                  <div class="recent-client">
+                    <img
+                      src="assets/client-logos/stuttgart.png"
+                      alt="Stuttgart Plant"
+                      class="client-logo"
+                    />
+                    <div class="recent-client-info">
+                      <h4>Stuttgart Plant</h4>
+                      <p>Automotive Manufacturing</p>
+                    </div>
+                    <span class="status status-active">Active</span>
+                    <a href="#" class="btn-icon client-menu-btn">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                  </div>
+                  <div class="recent-client">
+                    <img
+                      src="assets/client-logos/munich.png"
+                      alt="Munich Plant"
+                      class="client-logo"
+                    />
+                    <div class="recent-client-info">
+                      <h4>Munich Plant</h4>
+                      <p>Electronics Manufacturing</p>
+                    </div>
+                    <span class="status status-active">Active</span>
+                    <a href="#" class="btn-icon client-menu-btn">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                  </div>
+                  <div class="recent-client">
+                    <img
+                      src="assets/client-logos/berlin.png"
+                      alt="Berlin Plant"
+                      class="client-logo"
+                    />
+                    <div class="recent-client-info">
+                      <h4>Berlin Plant</h4>
+                      <p>Research & Development</p>
+                    </div>
+                    <span class="status status-pending">Pending</span>
+                    <a href="#" class="btn-icon client-menu-btn">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                  </div>
+                  <div class="recent-client">
+                    <img
+                      src="assets/client-logos/shanghai.png"
+                      alt="Shanghai Plant"
+                      class="client-logo"
+                    />
+                    <div class="recent-client-info">
+                      <h4>Shanghai Plant</h4>
+                      <p>Automotive Manufacturing</p>
+                    </div>
+                    <span class="status status-active">Active</span>
+                    <a href="#" class="btn-icon client-menu-btn">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Reminders -->
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h3>Upcoming Reminders</h3>
+                <a href="calendar.html" class="view-all">View Calendar</a>
+              </div>
+              <div class="card-body">
+                <ul class="reminder-list" id="reminderList">
+                  <li class="reminder-item">
+                    <div class="reminder-date">
+                      <span class="day">25</span>
+                      <span class="month">Mar</span>
+                    </div>
+                    <div class="reminder-content">
+                      <h4>Client Meeting</h4>
+                      <p>Quarterly review with Stuttgart Plant</p>
+                      <span class="reminder-time">10:00 AM - 11:30 AM</span>
+                    </div>
+                    <div class="reminder-actions">
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reminder-item">
+                    <div class="reminder-date">
+                      <span class="day">27</span>
+                      <span class="month">Mar</span>
+                    </div>
+                    <div class="reminder-content">
+                      <h4>Contract Renewal</h4>
+                      <p>Berlin Plant contract needs to be renewed</p>
+                      <span class="reminder-time">All Day</span>
+                    </div>
+                    <div class="reminder-actions">
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reminder-item">
+                    <div class="reminder-date">
+                      <span class="day">30</span>
+                      <span class="month">Mar</span>
+                    </div>
+                    <div class="reminder-content">
+                      <h4>Monthly Report Due</h4>
+                      <p>Submit monthly performance reports</p>
+                      <span class="reminder-time">Before 5:00 PM</span>
+                    </div>
+                    <div class="reminder-actions">
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reminder-item">
+                    <div class="reminder-date">
+                      <span class="day">02</span>
+                      <span class="month">Apr</span>
+                    </div>
+                    <div class="reminder-content">
+                      <h4>Team Meeting</h4>
+                      <p>Discuss Q2 client acquisition strategy</p>
+                      <span class="reminder-time">2:00 PM - 3:30 PM</span>
+                    </div>
+                    <div class="reminder-actions">
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions & Tips -->
+          <div class="dashboard-actions">
+            <div class="quick-actions">
+              <h3>Quick Actions</h3>
+              <div class="action-buttons">
+                <a href="clients.html" class="action-btn" id="addClientBtn">
+                  <i class="fas fa-user-plus"></i>
+                  <span>Add Client</span>
+                </a>
+                <a href="tasks.html" class="action-btn" id="newTaskBtn">
+                  <i class="fas fa-tasks"></i>
+                  <span>New Task</span>
+                </a>
+                <a
+                  href="reports.html"
+                  class="action-btn"
+                  id="generateReportBtn"
+                >
+                  <i class="fas fa-file-alt"></i>
+                  <span>Generate Report</span>
+                </a>
+                <a
+                  href="calendar.html"
+                  class="action-btn"
+                  id="scheduleMeetingBtn"
+                >
+                  <i class="fas fa-calendar-plus"></i>
+                  <span>Schedule Meeting</span>
+                </a>
+              </div>
+            </div>
+            <div class="tips-tricks">
+              <h3>Tips & Resources</h3>
+              <div class="tips-carousel" id="tipsCarousel">
+                <div class="tip-card">
+                  <div class="tip-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="tip-content">
+                    <h4>Client Management Best Practices</h4>
+                    <p>
+                      Learn how to optimize your client relationships with our
+                      latest guide.
+                    </p>
+                    <a href="#" class="tip-link">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button
+                  class="carousel-control"
+                  data-direction="prev"
+                  id="prevTipBtn"
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-indicators">
+                  <span class="indicator active"></span>
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                </div>
+                <button
+                  class="carousel-control"
+                  data-direction="next"
+                  id="nextTipBtn"
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Add Client Modal -->
+    <div class="modal" id="addClientModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New Client</h2>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="addClientForm">
+            <div class="form-group">
+              <label for="clientName">Client Name*</label>
+              <input type="text" id="clientName" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientType">Client Type*</label>
+                <select id="clientType" required>
+                  <option value="">Select Type</option>
+                  <option value="Manufacturing Plant">
+                    Manufacturing Plant
+                  </option>
+                  <option value="Distribution Center">
+                    Distribution Center
+                  </option>
+                  <option value="Office">Office</option>
+                  <option value="Research Facility">Research Facility</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="clientStatus">Status*</label>
+                <select id="clientStatus" required>
+                  <option value="">Select Status</option>
+                  <option value="Active">Active</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientRegion">Region*</label>
+                <select id="clientRegion" required>
+                  <option value="">Select Region</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Americas">Americas</option>
+                  <option value="Asia-Pacific">Asia-Pacific</option>
+                  <option value="Middle East & Africa">
+                    Middle East & Africa
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="clientLocation">Location*</label>
+                <input type="text" id="clientLocation" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="clientValue">Annual Value (€)*</label>
+              <input
+                type="number"
+                id="clientValue"
+                step="0.1"
+                min="0"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="clientNotes">Notes</label>
+              <textarea id="clientNotes" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelAddClientBtn">
+            Cancel
+          </button>
+          <button class="btn btn-primary" id="saveClientBtn">
+            Save Client
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal" id="addTaskModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New Task</h2>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="addTaskForm">
+            <div class="form-group">
+              <label for="taskTitle">Task Title*</label>
+              <input type="text" id="taskTitle" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="taskClient">Related Client</label>
+                <select id="taskClient">
+                  <option value="">Select Client</option>
+                  <option value="Stuttgart Plant">Stuttgart Plant</option>
+                  <option value="Munich Plant">Munich Plant</option>
+                  <option value="Berlin Plant">Berlin Plant</option>
+                  <option value="Shanghai Plant">Shanghai Plant</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="taskPriority">Priority*</label>
+                <select id="taskPriority" required>
+                  <option value="">Select Priority</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="taskDueDate">Due Date*</label>
+                <input type="date" id="taskDueDate" required />
+              </div>
+              <div class="form-group">
+                <label for="taskAssignee">Assignee</label>
+                <select id="taskAssignee">
+                  <option value="">Select Assignee</option>
+                  <option value="Thomas Weber">Thomas Weber</option>
+                  <option value="Maria Schmidt">Maria Schmidt</option>
+                  <option value="Andreas Müller">Andreas Müller</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="taskDescription">Description</label>
+              <textarea id="taskDescription" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelAddTaskBtn">Cancel</button>
+          <button class="btn btn-primary" id="saveTaskBtn">Save Task</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule Meeting Modal -->
+    <div class="modal" id="scheduleMeetingModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Schedule Meeting</h2>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="scheduleMeetingForm">
+            <div class="form-group">
+              <label for="meetingTitle">Meeting Title*</label>
+              <input type="text" id="meetingTitle" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="meetingClient">Related Client</label>
+                <select id="meetingClient">
+                  <option value="">Select Client</option>
+                  <option value="Stuttgart Plant">Stuttgart Plant</option>
+                  <option value="Munich Plant">Munich Plant</option>
+                  <option value="Berlin Plant">Berlin Plant</option>
+                  <option value="Shanghai Plant">Shanghai Plant</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="meetingType">Meeting Type*</label>
+                <select id="meetingType" required>
+                  <option value="">Select Type</option>
+                  <option value="Client Review">Client Review</option>
+                  <option value="Project Update">Project Update</option>
+                  <option value="Contract Negotiation">
+                    Contract Negotiation
+                  </option>
+                  <option value="Internal Discussion">
+                    Internal Discussion
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="meetingDate">Date*</label>
+                <input type="date" id="meetingDate" required />
+              </div>
+              <div class="form-group">
+                <label for="meetingTime">Time*</label>
+                <input type="time" id="meetingTime" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meetingDuration">Duration*</label>
+              <select id="meetingDuration" required>
+                <option value="30">30 minutes</option>
+                <option value="60">1 hour</option>
+                <option value="90">1.5 hours</option>
+                <option value="120">2 hours</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="meetingParticipants">Participants</label>
+              <div class="participants-container">
+                <div class="participant-item">
+                  <input type="checkbox" id="participant1" checked />
+                  <label for="participant1">Thomas Weber</label>
+                </div>
+                <div class="participant-item">
+                  <input type="checkbox" id="participant2" />
+                  <label for="participant2">Maria Schmidt</label>
+                </div>
+                <div class="participant-item">
+                  <input type="checkbox" id="participant3" />
+                  <label for="participant3">Andreas Müller</label>
+                </div>
+                <div class="participant-item">
+                  <input type="checkbox" id="participant4" />
+                  <label for="participant4">Client Representative</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="meetingNotes">Agenda/Notes</label>
+              <textarea id="meetingNotes" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelMeetingBtn">Cancel</button>
+          <button class="btn btn-primary" id="saveMeetingBtn">
+            Schedule Meeting
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generate Report Modal -->
+    <div class="modal" id="generateReportModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Generate Report</h2>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="generateReportForm">
+            <div class="form-group">
+              <label for="reportType">Report Type*</label>
+              <select id="reportType" required>
+                <option value="">Select Report Type</option>
+                <option value="Client Performance">Client Performance</option>
+                <option value="Financial Summary">Financial Summary</option>
+                <option value="Activity Log">Activity Log</option>
+                <option value="Contract Status">Contract Status</option>
+                <option value="Custom Report">Custom Report</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reportClient">Client Filter</label>
+                <select id="reportClient">
+                  <option value="">All Clients</option>
+                  <option value="Stuttgart Plant">Stuttgart Plant</option>
+                  <option value="Munich Plant">Munich Plant</option>
+                  <option value="Berlin Plant">Berlin Plant</option>
+                  <option value="Shanghai Plant">Shanghai Plant</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="reportRegion">Region Filter</label>
+                <select id="reportRegion">
+                  <option value="">All Regions</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Americas">Americas</option>
+                  <option value="Asia-Pacific">Asia-Pacific</option>
+                  <option value="Middle East & Africa">
+                    Middle East & Africa
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reportStartDate">Start Date*</label>
+                <input type="date" id="reportStartDate" required />
+              </div>
+              <div class="form-group">
+                <label for="reportEndDate">End Date*</label>
+                <input type="date" id="reportEndDate" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Data to Include</label>
+              <div class="checkbox-container">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="includeRevenue" checked />
+                  <label for="includeRevenue">Revenue Data</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="includeActivities" checked />
+                  <label for="includeActivities">Activities</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="includeContacts" checked />
+                  <label for="includeContacts">Contact Information</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="includeDocuments" />
+                  <label for="includeDocuments">Related Documents</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reportFormat">Export Format*</label>
+              <select id="reportFormat" required>
+                <option value="pdf">PDF Document</option>
+                <option value="excel">Excel Spreadsheet</option>
+                <option value="csv">CSV File</option>
+                <option value="html">HTML Report</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reportNotes">Additional Notes</label>
+              <textarea id="reportNotes" rows="2"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelReportBtn">Cancel</button>
+          <button class="btn btn-primary" id="generateReportBtn">
+            Generate Report
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Chart.js for interactive charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Management - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/clients.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="clients.html">
+                <i class="fas fa-users"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="tasks.html">
+                <i class="fas fa-tasks"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="calendar.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="help.html">
+            <i class="fas fa-question-circle"></i>
+            <span>Help</span>
+          </a>
+          <a href="index.html">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="top-navbar">
+          <div class="page-title">
+            <h1>Client Management</h1>
+            <nav class="breadcrumb">
+              <a href="dashboard.html">Dashboard</a> /
+              <span>Clients</span>
+            </nav>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input type="text" placeholder="Search clients..." />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="notifications">
+              <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+              </button>
+              <div class="notification-dropdown">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                  <a href="#">Mark all as read</a>
+                </div>
+                <ul class="notification-list">
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        New client <strong>Stuttgart Plant</strong> has been
+                        added
+                      </p>
+                      <span class="notification-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Monthly report for <strong>Munich Plant</strong> is
+                        ready
+                      </p>
+                      <span class="notification-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        <strong>Berlin Plant</strong> contract is expiring in 7
+                        days
+                      </p>
+                      <span class="notification-time">Yesterday</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-icon">
+                      <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Task <strong>Update Client Information</strong> has been
+                        completed
+                      </p>
+                      <span class="notification-time">2 days ago</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="notification-footer">
+                  <a href="notifications.html">View all notifications</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-profile">
+              <button class="profile-btn">
+                <img src="assets/user-avatar.jpg" alt="User Avatar" />
+                <span>Thomas Weber</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="profile-dropdown">
+                <ul>
+                  <li>
+                    <a href="profile.html">
+                      <i class="fas fa-user"></i>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="help.html">
+                      <i class="fas fa-question-circle"></i>
+                      Help Center
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="index.html">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Client Management Content -->
+        <div class="content-wrapper">
+          <!-- Action Bar -->
+          <div class="action-bar">
+            <div class="action-left">
+              <button class="btn btn-primary">
+                <i class="fas fa-plus"></i> Add New Client
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-upload"></i> Import
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-download"></i> Export
+              </button>
+            </div>
+            <div class="action-right">
+              <div class="view-options">
+                <button class="view-btn active" data-view="table">
+                  <i class="fas fa-table"></i>
+                </button>
+                <button class="view-btn" data-view="grid">
+                  <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-btn" data-view="map">
+                  <i class="fas fa-map-marked-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filtering and Sorting -->
+          <div class="filter-bar">
+            <div class="filter-group">
+              <label for="typeFilter">Type:</label>
+              <select id="typeFilter">
+                <option value="">All Types</option>
+                <option value="manufacturing">Manufacturing Plant</option>
+                <option value="distribution">Distribution Center</option>
+                <option value="office">Office</option>
+                <option value="research">Research Facility</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="regionFilter">Region:</label>
+              <select id="regionFilter">
+                <option value="">All Regions</option>
+                <option value="europe">Europe</option>
+                <option value="americas">Americas</option>
+                <option value="asia">Asia-Pacific</option>
+                <option value="mea">Middle East & Africa</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="statusFilter">Status:</label>
+              <select id="statusFilter">
+                <option value="">All Statuses</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+            <div class="filter-group filter-group-sort">
+              <label for="sortOrder">Sort By:</label>
+              <select id="sortOrder">
+                <option value="name_asc">Name (A-Z)</option>
+                <option value="name_desc">Name (Z-A)</option>
+                <option value="date_desc">Latest First</option>
+                <option value="date_asc">Oldest First</option>
+                <option value="value_desc">Value (High-Low)</option>
+                <option value="value_asc">Value (Low-High)</option>
+              </select>
+            </div>
+            <button class="btn btn-filter-clear">
+              <i class="fas fa-times"></i> Clear Filters
+            </button>
+          </div>
+
+          <!-- Client Table View -->
+          <div class="client-view client-table-view active">
+            <div class="table-responsive">
+              <table class="client-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <input type="checkbox" id="selectAll" />
+                    </th>
+                    <th>Client Name <i class="fas fa-sort"></i></th>
+                    <th>Client ID <i class="fas fa-sort"></i></th>
+                    <th>Type <i class="fas fa-sort"></i></th>
+                    <th>Location <i class="fas fa-sort"></i></th>
+                    <th>Status <i class="fas fa-sort"></i></th>
+                    <th>Last Contact <i class="fas fa-sort"></i></th>
+                    <th>Annual Value <i class="fas fa-sort"></i></th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/stuttgart.png"
+                          alt="Stuttgart Plant"
+                        />
+                        <div>
+                          <h4>Stuttgart Plant</h4>
+                          <span>Automotive Manufacturing</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0001</td>
+                    <td>Manufacturing Plant</td>
+                    <td>Stuttgart, Germany</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 21, 2025</td>
+                    <td>€8.5M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/munich.png"
+                          alt="Munich Plant"
+                        />
+                        <div>
+                          <h4>Munich Plant</h4>
+                          <span>Electronics Manufacturing</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0002</td>
+                    <td>Manufacturing Plant</td>
+                    <td>Munich, Germany</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 18, 2025</td>
+                    <td>€6.2M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/berlin.png"
+                          alt="Berlin Plant"
+                        />
+                        <div>
+                          <h4>Berlin Plant</h4>
+                          <span>Research & Development</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0003</td>
+                    <td>Research Facility</td>
+                    <td>Berlin, Germany</td>
+                    <td>
+                      <span class="status status-pending">Pending Renewal</span>
+                    </td>
+                    <td>Mar 15, 2025</td>
+                    <td>€4.7M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/shanghai.png"
+                          alt="Shanghai Plant"
+                        />
+                        <div>
+                          <h4>Shanghai Plant</h4>
+                          <span>Automotive Manufacturing</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0004</td>
+                    <td>Manufacturing Plant</td>
+                    <td>Shanghai, China</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 10, 2025</td>
+                    <td>€7.8M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/bangalore.png"
+                          alt="Bangalore Facility"
+                        />
+                        <div>
+                          <h4>Bangalore Facility</h4>
+                          <span>Software Development</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0005</td>
+                    <td>Office</td>
+                    <td>Bangalore, India</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 05, 2025</td>
+                    <td>€3.9M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/chicago.png"
+                          alt="Chicago Distribution"
+                        />
+                        <div>
+                          <h4>Chicago Distribution</h4>
+                          <span>Distribution Center</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0006</td>
+                    <td>Distribution Center</td>
+                    <td>Chicago, USA</td>
+                    <td>
+                      <span class="status status-inactive">Inactive</span>
+                    </td>
+                    <td>Feb 28, 2025</td>
+                    <td>€5.2M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="client-select" /></td>
+                    <td class="client-name">
+                      <div class="client-info">
+                        <img
+                          src="assets/client-logos/saopaulo.png"
+                          alt="São Paulo Plant"
+                        />
+                        <div>
+                          <h4>São Paulo Plant</h4>
+                          <span>Power Tools Manufacturing</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>CLI-0007</td>
+                    <td>Manufacturing Plant</td>
+                    <td>São Paulo, Brazil</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Feb 20, 2025</td>
+                    <td>€4.1M</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View Details">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn-icon" title="Delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-pagination">
+              <div class="pagination-info">
+                Showing <span>1-7</span> of <span>42</span> clients
+              </div>
+              <div class="pagination-controls">
+                <button class="pagination-btn" disabled>
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="pagination-size">
+                <label for="pageSize">Show:</label>
+                <select id="pageSize">
+                  <option value="7">7</option>
+                  <option value="15">15</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Grid View (Hidden by default) -->
+          <div class="client-view client-grid-view">
+            <div class="client-grid">
+              <div class="client-card">
+                <div class="client-card-header">
+                  <img
+                    src="assets/client-logos/stuttgart.png"
+                    alt="Stuttgart Plant"
+                    class="client-logo"
+                  />
+                  <span class="status status-active">Active</span>
+                </div>
+                <div class="client-card-body">
+                  <h3>Stuttgart Plant</h3>
+                  <p class="client-type">Automotive Manufacturing</p>
+                  <p class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Stuttgart, Germany
+                  </p>
+                  <div class="client-stats">
+                    <div class="stat-item">
+                      <span class="stat-label">Annual Value</span>
+                      <span class="stat-value">€8.5M</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-label">Last Contact</span>
+                      <span class="stat-value">Mar 21, 2025</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-card-footer">
+                  <button class="btn-icon" title="View Details">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="btn-icon" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-icon" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- More client cards would be here, similar to the one above -->
+            </div>
+          </div>
+
+          <!-- Client Map View (Hidden by default) -->
+          <div class="client-view client-map-view">
+            <div class="map-container">
+              <img
+                src="assets/world-map.png"
+                alt="World Map with Client Locations"
+                class="world-map"
+              />
+              <!-- Map markers would be positioned absolutely over the map -->
+              <div
+                class="map-marker"
+                style="top: 30%; left: 48%"
+                data-client="Stuttgart Plant"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div
+                class="map-marker"
+                style="top: 31%; left: 48.5%"
+                data-client="Munich Plant"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <!-- More map markers would be here -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Client Details Modal (Hidden by default) -->
+    <div class="modal client-details-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Client Details</h2>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <!-- Client details would be loaded here -->
+          <div class="client-profile">
+            <div class="client-profile-header">
+              <img
+                src="assets/client-logos/stuttgart.png"
+                alt="Stuttgart Plant"
+                class="client-logo"
+              />
+              <div class="client-profile-info">
+                <h3>Stuttgart Plant</h3>
+                <p>Automotive Manufacturing</p>
+                <span class="status status-active">Active</span>
+              </div>
+            </div>
+
+            <div class="client-tabs">
+              <button class="tab-btn active" data-tab="overview">
+                Overview
+              </button>
+              <button class="tab-btn" data-tab="contacts">Contacts</button>
+              <button class="tab-btn" data-tab="history">History</button>
+              <button class="tab-btn" data-tab="documents">Documents</button>
+              <button class="tab-btn" data-tab="notes">Notes</button>
+            </div>
+
+            <div class="tab-content active" id="overview">
+              <div class="info-grid">
+                <div class="info-item">
+                  <span class="info-label">Client ID</span>
+                  <span class="info-value">CLI-0001</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Type</span>
+                  <span class="info-value">Manufacturing Plant</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Stuttgart, Germany</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Status</span>
+                  <span class="info-value">Active</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Annual Value</span>
+                  <span class="info-value">€8.5M</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Contract Start</span>
+                  <span class="info-value">Jan 15, 2023</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Contract End</span>
+                  <span class="info-value">Jan 14, 2026</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Account Manager</span>
+                  <span class="info-value">Thomas Weber</span>
+                </div>
+              </div>
+
+              <div class="client-stats-detailed">
+                <h4>Performance Overview</h4>
+                <div class="stat-chart">
+                  <!-- Chart placeholder -->
+                  <img
+                    src="assets/chart-placeholder.png"
+                    alt="Client Performance Chart"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Other tab contents would be here but hidden by default -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline">Export Details</button>
+          <button class="btn btn-primary">Edit Client</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/clients.js"></script>
+  </body>
+</html>

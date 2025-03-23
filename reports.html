@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports - BOSCH CMS</title>
+    <link rel="stylesheet" href="css/reports.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="assets/bosch-logo.png" alt="BOSCH Logo" class="logo" />
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="clients.html">
+                <i class="fas fa-users"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="analytics.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="tasks.html">
+                <i class="fas fa-tasks"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="calendar.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Documents</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="help.html">
+            <i class="fas fa-question-circle"></i>
+            <span>Help</span>
+          </a>
+          <a href="index.html" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="top-navbar">
+          <div class="page-title">
+            <h1>Reports</h1>
+            <nav class="breadcrumb">
+              <a href="dashboard.html">Dashboard</a> /
+              <span>Reports</span>
+            </nav>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="search-container">
+              <input
+                type="text"
+                placeholder="Search reports..."
+                id="reportSearch"
+              />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="notifications">
+              <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+              </button>
+              <div class="notification-dropdown">
+                <div class="notification-header">
+                  <h3>Notifications</h3>
+                  <a href="#" id="markAllRead">Mark all as read</a>
+                </div>
+                <ul class="notification-list">
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        New client <strong>Stuttgart Plant</strong> has been
+                        added
+                      </p>
+                      <span class="notification-time">1 hour ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        Monthly report for <strong>Munich Plant</strong> is
+                        ready
+                      </p>
+                      <span class="notification-time">3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="unread">
+                    <div class="notification-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                      <p>
+                        <strong>Berlin Plant</strong> contract is expiring in 7
+                        days
+                      </p>
+                      <span class="notification-time">Yesterday</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="notification-footer">
+                  <a href="notifications.html">View all notifications</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-profile">
+              <button class="profile-btn">
+                <img src="assets/user-avatar.jpg" alt="User Avatar" />
+                <span>Thomas Weber</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="profile-dropdown">
+                <ul>
+                  <li>
+                    <a href="profile.html">
+                      <i class="fas fa-user"></i>
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="fas fa-cog"></i>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="help.html">
+                      <i class="fas fa-question-circle"></i>
+                      Help Center
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="index.html" id="logoutBtnMenu">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Reports Content -->
+        <div class="content-wrapper">
+          <!-- Action Bar -->
+          <div class="action-bar">
+            <div class="action-left">
+              <button class="btn btn-primary" id="createReportBtn">
+                <i class="fas fa-plus"></i> Create New Report
+              </button>
+              <button class="btn btn-outline" id="scheduleReportBtn">
+                <i class="fas fa-clock"></i> Schedule Report
+              </button>
+            </div>
+            <div class="action-right">
+              <div class="view-options">
+                <button class="view-btn active" data-view="card">
+                  <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-btn" data-view="list">
+                  <i class="fas fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Filters -->
+          <div class="filter-bar">
+            <div class="filter-group">
+              <label for="reportTypeFilter">Report Type:</label>
+              <select id="reportTypeFilter">
+                <option value="">All Types</option>
+                <option value="client">Client Performance</option>
+                <option value="financial">Financial Summary</option>
+                <option value="activity">Activity Log</option>
+                <option value="contract">Contract Status</option>
+                <option value="custom">Custom Reports</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="dateRangeFilter">Date Range:</label>
+              <select id="dateRangeFilter">
+                <option value="">All Time</option>
+                <option value="last7">Last 7 Days</option>
+                <option value="last30">Last 30 Days</option>
+                <option value="last90">Last 90 Days</option>
+                <option value="thisYear">This Year</option>
+                <option value="lastYear">Last Year</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="createdByFilter">Created By:</label>
+              <select id="createdByFilter">
+                <option value="">All Users</option>
+                <option value="me">Me</option>
+                <option value="team">My Team</option>
+                <option value="system">System Generated</option>
+              </select>
+            </div>
+            <button class="btn btn-filter-clear" id="clearFiltersBtn">
+              <i class="fas fa-times"></i> Clear Filters
+            </button>
+          </div>
+
+          <!-- Report Templates Section -->
+          <div class="section-header">
+            <h2>Report Templates</h2>
+            <p>Quick access to commonly used reports</p>
+          </div>
+
+          <div class="report-templates">
+            <div class="template-card" data-type="client">
+              <div class="template-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="template-content">
+                <h3>Client Performance</h3>
+                <p>Analyze client metrics and KPIs over time</p>
+              </div>
+              <button class="btn btn-primary template-btn">Use Template</button>
+            </div>
+
+            <div class="template-card" data-type="financial">
+              <div class="template-icon">
+                <i class="fas fa-euro-sign"></i>
+              </div>
+              <div class="template-content">
+                <h3>Financial Summary</h3>
+                <p>Revenue, costs, and financial metrics</p>
+              </div>
+              <button class="btn btn-primary template-btn">Use Template</button>
+            </div>
+
+            <div class="template-card" data-type="activity">
+              <div class="template-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="template-content">
+                <h3>Activity Log</h3>
+                <p>Detailed history of client interactions</p>
+              </div>
+              <button class="btn btn-primary template-btn">Use Template</button>
+            </div>
+
+            <div class="template-card" data-type="contract">
+              <div class="template-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <div class="template-content">
+                <h3>Contract Status</h3>
+                <p>View active, pending, and expired contracts</p>
+              </div>
+              <button class="btn btn-primary template-btn">Use Template</button>
+            </div>
+          </div>
+
+          <!-- Recent Reports Section -->
+          <div class="section-header">
+            <h2>Recent Reports</h2>
+            <a href="#" class="view-all">View All Reports</a>
+          </div>
+
+          <!-- Card View (default) -->
+          <div class="report-view report-card-view active">
+            <div class="report-grid" id="reportGrid">
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="client">
+                    <i class="fas fa-users"></i>
+                    <span>Client Performance</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Q1 2025 Client Performance Report</h3>
+                  <p class="report-description">
+                    Comprehensive analysis of all client performance metrics for
+                    Q1 2025.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Mar 20, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: Thomas Weber</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="financial">
+                    <i class="fas fa-euro-sign"></i>
+                    <span>Financial Summary</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Monthly Financial Report - March 2025</h3>
+                  <p class="report-description">
+                    Monthly financial analysis including revenue, costs, and
+                    profit margins.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Mar 18, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: System</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="contract">
+                    <i class="fas fa-file-contract"></i>
+                    <span>Contract Status</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Contract Expiration Report</h3>
+                  <p class="report-description">
+                    List of contracts expiring in the next 90 days with renewal
+                    status.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Mar 15, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: Maria Schmidt</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="activity">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Activity Log</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Client Interaction Report - Stuttgart Plant</h3>
+                  <p class="report-description">
+                    Detailed log of all interactions with Stuttgart Plant in Q1
+                    2025.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Mar 10, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: Thomas Weber</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="custom">
+                    <i class="fas fa-cog"></i>
+                    <span>Custom Report</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Regional Performance Analysis</h3>
+                  <p class="report-description">
+                    Comparative analysis of client performance across different
+                    regions.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Mar 5, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: Andreas Müller</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <div class="report-type" data-type="financial">
+                    <i class="fas fa-euro-sign"></i>
+                    <span>Financial Summary</span>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn-icon" title="More Options">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="report-card-body">
+                  <h3>Quarterly Revenue Report - Q4 2024</h3>
+                  <p class="report-description">
+                    Comprehensive breakdown of revenue sources for Q4 2024.
+                  </p>
+                  <div class="report-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Generated: Feb 28, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-user"></i>
+                      <span>By: System</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="report-card-footer">
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-eye"></i> View
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button class="btn btn-outline btn-sm">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- List View -->
+          <div class="report-view report-list-view">
+            <div class="report-table-container">
+              <table class="report-table">
+                <thead>
+                  <tr>
+                    <th>Report Name</th>
+                    <th>Type</th>
+                    <th>Date Generated</th>
+                    <th>Created By</th>
+                    <th>Format</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-users report-icon"
+                          data-type="client"
+                        ></i>
+                        <span>Q1 2025 Client Performance Report</span>
+                      </div>
+                    </td>
+                    <td>Client Performance</td>
+                    <td>Mar 20, 2025</td>
+                    <td>Thomas Weber</td>
+                    <td>PDF, Excel</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-euro-sign report-icon"
+                          data-type="financial"
+                        ></i>
+                        <span>Monthly Financial Report - March 2025</span>
+                      </div>
+                    </td>
+                    <td>Financial Summary</td>
+                    <td>Mar 18, 2025</td>
+                    <td>System</td>
+                    <td>PDF, Excel</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-file-contract report-icon"
+                          data-type="contract"
+                        ></i>
+                        <span>Contract Expiration Report</span>
+                      </div>
+                    </td>
+                    <td>Contract Status</td>
+                    <td>Mar 15, 2025</td>
+                    <td>Maria Schmidt</td>
+                    <td>PDF</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-chart-line report-icon"
+                          data-type="activity"
+                        ></i>
+                        <span>Client Interaction Report - Stuttgart Plant</span>
+                      </div>
+                    </td>
+                    <td>Activity Log</td>
+                    <td>Mar 10, 2025</td>
+                    <td>Thomas Weber</td>
+                    <td>PDF, CSV</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-cog report-icon"
+                          data-type="custom"
+                        ></i>
+                        <span>Regional Performance Analysis</span>
+                      </div>
+                    </td>
+                    <td>Custom Report</td>
+                    <td>Mar 5, 2025</td>
+                    <td>Andreas Müller</td>
+                    <td>PDF, Excel</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="report-name">
+                        <i
+                          class="fas fa-euro-sign report-icon"
+                          data-type="financial"
+                        ></i>
+                        <span>Quarterly Revenue Report - Q4 2024</span>
+                      </div>
+                    </td>
+                    <td>Financial Summary</td>
+                    <td>Feb 28, 2025</td>
+                    <td>System</td>
+                    <td>PDF, Excel</td>
+                    <td class="actions">
+                      <button class="btn-icon" title="View">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="Share">
+                        <i class="fas fa-share"></i>
+                      </button>
+                      <button class="btn-icon" title="More">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Scheduled Reports Section -->
+          <div class="section-header">
+            <h2>Scheduled Reports</h2>
+            <a href="#" class="view-all">Manage Schedules</a>
+          </div>
+
+          <div class="scheduled-reports">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Report Name</th>
+                  <th>Frequency</th>
+                  <th>Next Run</th>
+                  <th>Recipients</th>
+                  <th>Format</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monthly Financial Summary</td>
+                  <td>Monthly (1st)</td>
+                  <td>Apr 1, 2025</td>
+                  <td>Finance Team (5)</td>
+                  <td>PDF, Excel</td>
+                  <td><span class="status-active">Active</span></td>
+                  <td class="actions">
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Pause">
+                      <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="btn-icon" title="Delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weekly Client Activity Report</td>
+                  <td>Weekly (Monday)</td>
+                  <td>Mar 25, 2025</td>
+                  <td>Account Managers (8)</td>
+                  <td>PDF</td>
+                  <td><span class="status-active">Active</span></td>
+                  <td class="actions">
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Pause">
+                      <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="btn-icon" title="Delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Quarterly Performance Analysis</td>
+                  <td>Quarterly</td>
+                  <td>Jun 30, 2025</td>
+                  <td>Executive Team (3)</td>
+                  <td>PDF, Excel, PPT</td>
+                  <td><span class="status-active">Active</span></td>
+                  <td class="actions">
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Pause">
+                      <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="btn-icon" title="Delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contract Renewal Alert</td>
+                  <td>Monthly (15th)</td>
+                  <td>Apr 15, 2025</td>
+                  <td>Legal Team (4)</td>
+                  <td>PDF</td>
+                  <td><span class="status-paused">Paused</span></td>
+                  <td class="actions">
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Resume">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <button class="btn-icon" title="Delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Report Metrics Section -->
+          <div class="section-header">
+            <h2>Report Metrics</h2>
+            <p>Usage statistics and performance insights</p>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-header">
+                <h3>Reports Generated</h3>
+                <span class="time-period">Last 30 Days</span>
+              </div>
+              <div class="metric-value">
+                <span class="large-number">42</span>
+                <span class="change positive"
+                  >+12% <i class="fas fa-arrow-up"></i
+                ></span>
+              </div>
+              <div class="metric-chart">
+                <!-- Chart placeholder -->
+                <div class="chart-placeholder"></div>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <h3>Most Viewed Report</h3>
+                <span class="time-period">This Month</span>
+              </div>
+              <div class="metric-content">
+                <h4>Monthly Financial Report</h4>
+                <p><i class="fas fa-eye"></i> 78 Views</p>
+                <p><i class="fas fa-download"></i> 34 Downloads</p>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <h3>Report Type Distribution</h3>
+                <span class="time-period">All Time</span>
+              </div>
+              <div class="metric-chart">
+                <!-- Chart placeholder -->
+                <div class="chart-placeholder pie-chart"></div>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <h3>Average Generation Time</h3>
+                <span class="time-period">Last 30 Days</span>
+              </div>
+              <div class="metric-value">
+                <span class="large-number">3.2s</span>
+                <span class="change negative"
+                  >+0.5s <i class="fas fa-arrow-up"></i
+                ></span>
+              </div>
+              <div class="metric-footer">
+                <button class="btn btn-text">Optimize Performance</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal for Creating New Report -->
+    <div class="modal" id="createReportModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create New Report</h2>
+          <button class="close-btn" id="closeCreateReportModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="createReportForm">
+            <div class="form-group">
+              <label for="reportName">Report Name</label>
+              <input
+                type="text"
+                id="reportName"
+                name="reportName"
+                placeholder="Enter report name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reportType">Report Type</label>
+              <select id="reportType" name="reportType" required>
+                <option value="">Select a report type</option>
+                <option value="client">Client Performance</option>
+                <option value="financial">Financial Summary</option>
+                <option value="activity">Activity Log</option>
+                <option value="contract">Contract Status</option>
+                <option value="custom">Custom Report</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group form-group-half">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate" required />
+              </div>
+              <div class="form-group form-group-half">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" name="endDate" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="clientSelect">Select Clients</label>
+              <select id="clientSelect" name="clientSelect" multiple>
+                <option value="all">All Clients</option>
+                <option value="1">Stuttgart Plant</option>
+                <option value="2">Munich Plant</option>
+                <option value="3">Berlin Plant</option>
+                <option value="4">Frankfurt Office</option>
+                <option value="5">Hamburg Distribution</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reportFormat">Output Format</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="format" value="pdf" checked />
+                  PDF
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="format" value="excel" /> Excel
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="format" value="csv" /> CSV
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="format" value="ppt" /> PowerPoint
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reportDescription">Description (Optional)</label>
+              <textarea
+                id="reportDescription"
+                name="reportDescription"
+                rows="3"
+                placeholder="Enter a brief description for this report"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelCreateReport">
+            Cancel
+          </button>
+          <button class="btn btn-primary" id="submitCreateReport">
+            Generate Report
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Scheduling Report -->
+    <div class="modal" id="scheduleReportModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Schedule Report</h2>
+          <button class="close-btn" id="closeScheduleReportModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="scheduleReportForm">
+            <div class="form-group">
+              <label for="scheduleReportSelect">Select Report</label>
+              <select
+                id="scheduleReportSelect"
+                name="scheduleReportSelect"
+                required
+              >
+                <option value="">Select a report</option>
+                <option value="1">Client Performance Report</option>
+                <option value="2">Financial Summary Report</option>
+                <option value="3">Activity Log Report</option>
+                <option value="4">Contract Status Report</option>
+                <option value="5">Regional Performance Analysis</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="scheduleFrequency">Frequency</label>
+              <select id="scheduleFrequency" name="scheduleFrequency" required>
+                <option value="">Select frequency</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="annual">Annual</option>
+              </select>
+            </div>
+            <div class="form-group" id="weeklyOptions" style="display: none">
+              <label>Select Day</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="radio" name="weekday" value="monday" checked />
+                  Monday
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="weekday" value="tuesday" /> Tuesday
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="weekday" value="wednesday" />
+                  Wednesday
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="weekday" value="thursday" />
+                  Thursday
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="weekday" value="friday" /> Friday
+                </label>
+              </div>
+            </div>
+            <div class="form-group" id="monthlyOptions" style="display: none">
+              <label for="monthDay">Day of Month</label>
+              <select id="monthDay" name="monthDay">
+                <option value="1">1st</option>
+                <option value="15">15th</option>
+                <option value="last">Last day</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="scheduleTime">Time</label>
+              <input
+                type="time"
+                id="scheduleTime"
+                name="scheduleTime"
+                value="08:00"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="scheduleRecipients">Recipients</label>
+              <select
+                id="scheduleRecipients"
+                name="scheduleRecipients"
+                multiple
+                required
+              >
+                <option value="team1">Management Team</option>
+                <option value="team2">Finance Team</option>
+                <option value="team3">Account Managers</option>
+                <option value="team4">Legal Team</option>
+                <option value="user1">Thomas Weber</option>
+                <option value="user2">Maria Schmidt</option>
+                <option value="user3">Andreas Müller</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="scheduleFormat">Output Format</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="scheduleFormat"
+                    value="pdf"
+                    checked
+                  />
+                  PDF
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scheduleFormat" value="excel" />
+                  Excel
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scheduleFormat" value="csv" />
+                  CSV
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="scheduleFormat" value="ppt" />
+                  PowerPoint
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="scheduleMessage">Email Message (Optional)</label>
+              <textarea
+                id="scheduleMessage"
+                name="scheduleMessage"
+                rows="3"
+                placeholder="Add a message to include in the email"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline" id="cancelScheduleReport">
+            Cancel
+          </button>
+          <button class="btn btn-primary" id="submitScheduleReport">
+            Schedule Report
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/reports.js"></script>
+  </body>
+</html>
